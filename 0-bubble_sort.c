@@ -27,7 +27,7 @@ void bubble_sort(int *array, size_t size)
 }
 
 /**
- * sort - sort function
+ * swap - sort function
  * @array: array
  * @x: index x
  * @y: index y
