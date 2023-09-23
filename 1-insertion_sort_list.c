@@ -6,12 +6,12 @@
 
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *current, *temp, *insertion_point; 
+	listint_t *current, *temp, *insertion_point;
+
 	if (list == NULL || *list == NULL)
 		return;
 
 	current = (*list)->next;
-	
 
 	while (current != NULL)
 	{
@@ -22,10 +22,10 @@ void insertion_sort_list(listint_t **list)
 			if (temp->next != NULL)
 				temp->next->prev = insertion_point;
 			insertion_point->next = temp->next;
-			
+
 			temp->prev = insertion_point->prev;
 			temp->next = insertion_point;
-			
+
 			if (insertion_point->prev != NULL)
 				insertion_point->prev->next = temp;
 			else
@@ -36,5 +36,4 @@ void insertion_sort_list(listint_t **list)
 		}
 		current = current->next;
 	}
-	
 }
