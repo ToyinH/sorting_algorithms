@@ -10,67 +10,21 @@ The time complexity is saved in a file with each line corresponding to the best 
 Kindly note some of the format for the time complexity.
 
 O(1)
+
 O(n)
+
 O(n!)
+
 n square -> O(n^2)
+
 log(n) -> O(log(n))
+
 n * log(n) -> O(nlog(n))
+
 n + k -> O(n+k)
 
-For this project, here is the print_array and print_list functions.
 
-print_array function
-=====================
-#include <stdlib.h>
-#include <stdio.h>
-
-/**
- * print_array - Prints an array of integers
- *
- * @array: The array to be printed
- * @size: Number of elements in @array
- */
-void print_array(const int *array, size_t size)
-{
-    size_t i;
-
-    i = 0;
-    while (array && i < size)
-    {
-        if (i > 0)
-            printf(", ");
-        printf("%d", array[i]);
-        ++i;
-    }
-    printf("\n");
-}
-
-
-print_list function
-====================
-#include <stdio.h>
-#include "sort.h"
-
-/**
- * print_list - Prints a list of integers
- *
- * @list: The list to be printed
- */
-void print_list(const listint_t *list)
-{
-    int i;
-
-    i = 0;
-    while (list)
-    {
-        if (i > 0)
-            printf(", ");
-        printf("%d", list->n);
-        ++i;
-        list = list->next;
-    }
-    printf("\n");
-}
+For this project, the print_array and print_list functions are used to print the list after each swap.
 
 
 File: 0-bubble_sort.c, 0-O
